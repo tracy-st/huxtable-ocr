@@ -11,14 +11,14 @@ Before starting, make sure that your input list and your filenames do not includ
 
 ## Usage
 
-1. **google_pdf_ocr.py**. 
+1. **google_pdf_ocr.py**<br>
 Run OCR on PDF files stored in the cloud. Writes JSON output to the cloud.
 
-2. Download output using Google Cloud CLI in terminal
-       `./google-cloud-sdk/bin/gcloud init`
+2. Download output using Google Cloud CLI in terminal<br>
+       `./google-cloud-sdk/bin/gcloud init`<br>
        `gsutil cp -r [GOOGLE FOLDER] [OUTPUT FOLDER]`
        
-3. **json_to_csv_rename.py**. 
+3. **json_to_csv_rename.py**<br>
 Write all output (filename, detected text) to a single CSV.
 
 ## Acknowledgments
