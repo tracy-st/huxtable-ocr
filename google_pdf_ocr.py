@@ -5,9 +5,11 @@ from google.cloud import storage
 import os
 import time
 
+# Replace 'Google credentials json file' with file downloaded from Google Cloud Console
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="[[Google credentials json file]]"
 
-items = [line.rstrip('\n') for line in open('[[list of PDF files in Google cloud bucket]]')]
+#'list.txt' = list of files in Google Cloud bucket
+items = [line.rstrip('\n') for line in open('list.txt')]
 
 def async_detect_document(gcs_source_uri):
     """OCR with PDF/TIFF as source files on GCS"""
@@ -97,7 +99,6 @@ def write_to_text(gcs_input_uri, gcs_destination_uri):
     print('Output files:')
     for blob in blob_list2:
         print(blob.name)
-
 
 def process_pdfs():
     for item in items:
